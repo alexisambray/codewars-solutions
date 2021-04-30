@@ -55,6 +55,7 @@ int main() {
 
   int* frequencyTable = buildFrequencyTable(startNum, endNum);
   displayFrequencyTable(frequencyTable);
+  free(frequencyTable);
 
   return 0;
 }
