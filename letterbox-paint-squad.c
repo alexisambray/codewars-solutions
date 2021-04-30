@@ -24,8 +24,15 @@ void getFrequencies(const char* snum, int* frequencyTable) {
   }
 }
 
+void initializeFrequencyTable(int* frequencyTable) {
+  for (int i = 0; i < DIGITS; i++) {
+    frequencyTable[i] = 0;
+  }
+}
+
 int* buildFrequencyTable(const int startNum, const int endNum) {
   int* frequencyTable = (int*)malloc(DIGITS * sizeof(int));
+  initializeFrequencyTable(frequencyTable);
 
   for (int i = startNum; i <= endNum; i++) {
     char snum[10];
